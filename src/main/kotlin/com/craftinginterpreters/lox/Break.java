@@ -1,10 +1,8 @@
 package com.craftinginterpreters.lox;
 
-class Return extends RuntimeException {
-    final Object value;
+class Break extends RuntimeException {
 
-    Return(Object value) {
+    Break() {
         super(null, null, false, false);
-        this.value = value;
     }
 }
