@@ -21,13 +21,19 @@ public class GenerateAst {
                 "Variable : Token name",
                 "Assign   : Token name, Expr value",
                 "Logical  : Expr left, Token operator, Expr right",
-                "Call     : Expr callee, Token paren, List<Expr> arguments"
+                "Call     : Expr callee, Token paren, List<Expr> arguments",
+                "Get      : Expr object, Token name",
+                "Set      : Expr object, Token name, Expr value",
+                "Super    : Token keyword, Token method",
+                "This     : Token keyword"
         ));
         defineAst(outputDir, "Stmt", Arrays.asList(
                 "Expression : Expr expression",
                 "Print      : Expr expression",
                 "Var        : Token name, Expr initializer",
                 "Block      : List<Stmt> statements",
+                "Class      : Token name, Expr.Variable superclass," +
+                        " List<Stmt.Function> methods",
                 "If         : Expr condition, Stmt thenBranch," +
                         " Stmt elseBranch",
                 "While      : Expr condition, Stmt body",

@@ -4,7 +4,9 @@ class Breakfast {
     this.bread = bread;
   }
 
-  // ...
+  serve(name) {
+      print "Enjoy your " + this.meat + " and " + this.bread + ", " + name + ".";
+  }
 }
 
 var baconAndToast = Breakfast("bacon", "toast");
@@ -14,7 +16,13 @@ baconAndToast.serve("Dear Reader");
 class Brunch < Breakfast {
   init(meat, bread, drink) {
     super.init(meat, bread);
-    print super
     this.drink = drink;
   }
+
+  serve(name) {
+    print "Enjoy your " + this.meat + ", " + this.drink + ", and " + this.bread.toUpperCase() + ", " + name + ".";
+  }
 }
+
+var baconAndToastAndBeer = Brunch("bacon", "toast", "beer");
+baconAndToastAndBeer.serve("Customer");
