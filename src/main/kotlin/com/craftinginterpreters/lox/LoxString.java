@@ -25,6 +25,20 @@ public class LoxString extends LoxInstance {
                     public int arity() {
                         return 0;
                     }
+                },
+                "toLowerCase",
+                new LoxCallable() {
+                    @Override
+                    public Object call(Interpreter interpreter,
+                                       List<Object> arguments) {
+
+                        return new LoxString(value.toLowerCase());
+                    }
+
+                    @Override
+                    public int arity() {
+                        return 0;
+                    }
                 }
         );
     }
