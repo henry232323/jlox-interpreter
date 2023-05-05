@@ -20,9 +20,9 @@ class Brunch < Breakfast {
   }
 
   serve(name) {
-    print "Enjoy your " + this.meat + ", " + this.drink + ", and " + this.bread.toUpperCase() + ", " + name + ".";
+    print "Enjoy your " + this.meat + ", " + this.drink.toLowerCase() + ", and " + this.bread.toUpperCase() + ", " + name + ".";
   }
 }
 
-var baconAndToastAndBeer = Brunch("bacon", "toast", "beer");
+var baconAndToastAndBeer = Brunch("冰淇淋", "toast", "BEER");
 baconAndToastAndBeer.serve("Customer");
